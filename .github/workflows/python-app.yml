@@ -36,4 +36,4 @@ jobs:
         ./bad/db_init.py
     - name: (4) Run dev webserver
       run: | 
-        cd bad && ../bin/flask --app vulpy run
+        cd bad && flask --app vulpy run
