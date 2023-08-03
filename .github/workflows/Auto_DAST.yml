@@ -21,7 +21,7 @@ env:
 
 jobs:
   stage-app-for-testing:
-     uses: aedify-prototype-organization/vulpy/.github/workflows/build.yml@main
+     uses: aedify-prototype-organization/vulpy/.github/workflows/build_app.yml@main
      
   run-DAST:
     runs-on: ubuntu-latest
