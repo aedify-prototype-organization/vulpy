@@ -20,13 +20,13 @@ env:
   NIGHTVISION_TARGET: http://127.0.0.1:5000/
 
 jobs:
-  build:
-
+  stage-app-for-testing:
+     uses: aedify-prototype-organization/vulpy/.github/workflows/build.yml@main
+     
+  run-DAST:
     runs-on: ubuntu-latest
-
+    
     steps:
-    - uses: aedify-prototype-organization/vulpy/.github/workflows/build.yml@main
-    - name: (0) Set up and run test instance
     - name: (1)  Install NightVision
       run: |
           wget -c https://downloads.nightvision.net/binaries/latest/nightvision_latest_linux_amd64.tar.gz -O - | tar -xz; sudo mv nightvision /usr/local/bin/
