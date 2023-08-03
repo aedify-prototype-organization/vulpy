@@ -35,4 +35,4 @@ jobs:
         ./bad/db_init.py
     - name: (4) Run dev webserver
       run: | 
-        ./bin/flask --app bad/vuply run
+        flask --app bad/vuply run
