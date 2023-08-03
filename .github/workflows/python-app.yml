@@ -36,4 +36,5 @@ jobs:
         ./bad/db_init.py
     - name: (4) Run dev webserver
       run: | 
+        export PYTYHONPATH=${PYTHONPATH}:./
         flask --app bad/vuply run
