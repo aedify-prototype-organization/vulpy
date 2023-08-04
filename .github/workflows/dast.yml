@@ -25,6 +25,7 @@ jobs:
      
   run-DAST:
     runs-on: ubuntu-latest
+    needs: stage-app-for-testing
     
     steps:
     - name: (1)  Install NightVision
